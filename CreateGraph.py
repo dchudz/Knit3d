@@ -1,3 +1,8 @@
+#Feel free to copy/modify, as long as you:
+#  --attribute me by name (David Chudzicki)
+#  --attribute me by URL (www.learnfromdata.com)
+#  --leave this notice attached
+
 from igraph import *
 from plotCN220Network3D import *
 import os
@@ -190,10 +195,21 @@ def movie(g, name, n=50):
 
 
 
-def plot2d(g):
+def plot2d(g, directory = "/home/ubuntu/dj/mysite/media/graphs/", name = "plot2d.png"):
     color_dict = {"across": "blue", "up": "red"}
     g.es["color"] = [color_dict[type] for type in g.es["type"]]
-    plot(g, "/home/ubuntu/dj/mysite/media/graphs/plot2d.png", layout=g.layout("kk") )
+    plot(g, directory + name, layout=g.layout("kk") )
+
+
+g = KnittedGraph()
+g.AddStitches(8)
+g.ConnectToZero()
+g.AddStitches(16)
+
+#g.AddStitch()
+#g.Decrease()
+
+plot2d(g)
 
 
 

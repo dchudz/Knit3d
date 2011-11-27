@@ -7,6 +7,9 @@
 Plot the network of the first 1000 #cn220 tweets with igraph and cairo.
 '''
 
+#Code originally from: http://www.michaelbommarito.com/blog/2011/02/21/plotting-3d-graphs-with-python-igraph-and-cairo-cn220-example/
+#Modified slightly (thicker edges) by David Chudzicki
+
 import cairo
 import codecs
 #import dateutil.parser
