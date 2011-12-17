@@ -124,6 +124,7 @@ def NegCurvature(RowLength, NumStitches):
             g.Increase()
         else:
             g.AddStitch()
+    return g
 
 
 
